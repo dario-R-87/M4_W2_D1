@@ -9,6 +9,7 @@ const option = {
   },
 };
 const url = "https://api.pexels.com/v1/search?query=" + query;
+const all = document.querySelector("#all");
 
 fetch(url, option)
   .then((res) => {
@@ -17,7 +18,6 @@ fetch(url, option)
   .then((obj) => {
     const items = obj.photos;
     console.log(items);
-    const all = document.querySelector("#all");
 
     items.forEach((item) => {
       all.innerHTML += `
