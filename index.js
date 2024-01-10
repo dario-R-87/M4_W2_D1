@@ -34,4 +34,4 @@ fetch(url, option)
     </div>
     `;
     });
-  });
+  }).catch((error)=> console.error(error));
